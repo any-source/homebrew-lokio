@@ -12,24 +12,24 @@ class Lokio < Formula
   if OS.mac?
     if Hardware::CPU.arm? || Hardware::CPU.in_rosetta2?
       url "https://github.com/any-source/lokio/releases/download/v#{version}/lokio-darwin-aarch64.zip"
-      sha256 "c4d58e06c5c33885b526f4d91a38ca9ebdb9fc3fb4cd547f7d3302055c98e41c" # lokio-darwin-aarch64.zip
+      sha256 "fe761362b271111a9bd19ab78f6c110353c6ed93d19693c9c76e347596515466" # lokio-darwin-aarch64.zip
     elsif Hardware::CPU.avx2?
       url "https://github.com/any-source/lokio/releases/download/v#{version}/lokio-darwin-x64.zip"
-      sha256 "2f7d5a9cd90bc4f28449dc7b76a5e9eefade03e119f1cd4e3f941b92b26c6595" # lokio-darwin-x64.zip
+      sha256 "a53deeadebeeb616c050cf0f4e6214325cb0251c44889b15417c2c1a8cbd8b3f" # lokio-darwin-x64.zip
     else
       url "https://github.com/any-source/lokio/releases/download/v#{version}/lokio-darwin-x64-baseline.zip"
-      sha256 "0f3b6e87d862d4016f8d95da177bc9136ca2e950f3d6d3d226a35d7061fff0f1" # lokio-darwin-x64-baseline.zip
+      sha256 "a53deeadebeeb616c050cf0f4e6214325cb0251c44889b15417c2c1a8cbd8b3f" # lokio-darwin-x64-baseline.zip
     end
   elsif OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/any-source/lokio/releases/download/v#{version}/lokio-linux-aarch64.zip"
-      sha256 "d1dbaa3e9af24549fad92bdbe4fb21fa53302cd048a8f004e85a240984c93d4d" # lokio-linux-aarch64.zip
+      sha256 "b4db258a3c6398b824b9c359ed2b6251cf0e28cc45d5a5afff6c60835e0ec024" # lokio-linux-aarch64.zip
     elsif Hardware::CPU.avx2?
       url "https://github.com/any-source/lokio/releases/download/v#{version}/lokio-linux-x64.zip"
-      sha256 "3f4efb8afd1f84ac2a98c04661c898561d1d35527d030cb4571e99b7c85f5079" # lokio-linux-x64.zip
+      sha256 "f947fc2bd6d8eabd9f318590796f522399c98ff9350734007fb5f0a465acc5a6" # lokio-linux-x64.zip
     else
       url "https://github.com/any-source/lokio/releases/download/v#{version}/lokio-linux-x64-baseline.zip"
-      sha256 "cad7756a6ee16f3432a328f8023fc5cd431106822eacfa6d6d3afbad6fdc24db" # lokio-linux-x64-baseline.zip
+      sha256 "f947fc2bd6d8eabd9f318590796f522399c98ff9350734007fb5f0a465acc5a6" # lokio-linux-x64-baseline.zip
     end
   else
     odie "Unsupported platform. Please submit a bug report here: https://lokio.dev/issues\n#{OS.report}"
